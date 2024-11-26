@@ -52,61 +52,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-// int main() {
-//     ifstream inFile("input4_bonus.txt");
-//     int nrProb,nrDoc,timeProb;
-//     string name,spec;
-//     vector<string> nameProb,specProb,nameDoc,specDoc;
-//     vector <vector <string>> medicProbs;
-//     vector<int> timeDoc;
-//     inFile >> nrProb;
-//
-//     for (int i = 0; i < nrProb; i++)
-//     {
-//         inFile >> name >> spec >> timeProb;
-//         nameProb.emplace_back(name);
-//         specProb.emplace_back(spec);
-//         timeDoc.emplace_back(timeProb);
-//     }
-//     inFile >> nrDoc;
-//     int timeArray[nrDoc];
-//     for (int i = 0; i < nrDoc; i++)
-//     {
-//        inFile >> name;
-//        inFile >> spec;
-//        nameDoc.emplace_back(name);
-//        specDoc.emplace_back(spec);
-//     }
-//     for (int i = 0; i < nrProb; i++) {
-//         bool foundDr = false;
-//         while(!foundDr) {
-//             auto foundDoc = find(specDoc.begin(), specDoc.end(),specProb[i]);
-//             if (foundDoc != specDoc.end()) {
-//                 int foundDoctor = static_cast<int>(distance(specDoc.begin(), foundDoc));
-//                 if(timeArray[foundDoctor] < 8) {
-//                     // cout << nameDoc[foundDoctor] << " " << timeArray[foundDoctor] << " " << nameProb[i] <<endl;
-//                     // timeArray[foundDoctor]+=timeDoc[foundDoctor];
-//                     // foundDr = true;
-//                     medicProbs[foundDoctor].emplace_back(specProb[i]);
-//                     timeArray[foundDoctor] += timeDoc[i];
-//                     foundDr = true;
-//                 } else {
-//                     specDoc.erase(specDoc.begin()+foundDoctor,specDoc.begin()+foundDoctor+1);
-//                     nameDoc.erase(nameDoc.begin()+foundDoctor,nameDoc.begin()+foundDoctor+1);
-//                 }
-//             }
-//             else foundDr=true;
-//         }
-//     }
-//     for(int i = 0; i < nrDoc; i++) {
-//         cout << nameDoc[i] << " " << timeDoc[i] << " ";
-//         for(int j = 0; j < medicProbs.size(); j++)
-//             cout << medicProbs[i][j] << " ";
-//         cout << endl;
-//     }
-//
-// }
-//Optional:
+
 class Doctor {
     public:
         Doctor(string name,string spec) {
